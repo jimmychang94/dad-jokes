@@ -1,6 +1,6 @@
 'use strict';
 
 page('/', app.homeView.initHomePage);
-page('/joke', ctx => app.Quote.fetchAll(app.quoteView.initQuotePage));
+page('/joke', ctx => app.Joke.fetchAll(app.jokeView.initJokePage));
 
 page();
