@@ -4,27 +4,27 @@ var app = app || {};
 
 (function (module) {
 
-  function Quote (rawDataObj) {
+  function Joke (rawDataObj) {
     this.body = rawDataObj.joke;
     this.id = rawDataObj.id;
     this.link = `https://icanhazdadjoke.com/j/${rawDataObj.id}`;
     this.image = `https://icanhazdadjoke.com/j/${rawDataObj.id}.png`;
   }
 
-  Quote.all = [];
+  Joke.all = [];
 
-  Quote.loadAll = quoteData => {
-    Quote.all = new Quote(quoteData);
+  Joke.loadAll = jokeData => {
+    Joke.all = new Joke(jokeData);
   }
 
-  Quote.fetchAll = callback => {
+  Joke.fetchAll = callback => {
     $.getJSON(`https://icanhazdadjoke.com/`)
       .then(results => {
-        Quote.loadAll(results);
+        Joke.loadAll(results);
         callback();
       }, err => console.error(err));
   }
 
-  module.Quote = Quote;
+  module.Joke = Joke;
 
 })(app);
