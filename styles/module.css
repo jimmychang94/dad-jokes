@@ -1,0 +1,35 @@
+h1 {
+  font-size: 5vw;
+}
+
+#quoteView h1 {
+  font-family: "Swanky and Moo Moo", cursive;
+}
+
+li {
+  border: 3px solid blue;
+  background-color: navy;
+  color: white;
+}
+
+button {
+  background-color: orange;
+}
+
+p a {
+  border: 3px solid maroon;
+  background-color: red;
+  color: black;
+}
+
+@media only screen and (min-width: 640px) {
+  h1 {
+    font-size: 3vw;
+  }  
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2vw;
+  }
+}
